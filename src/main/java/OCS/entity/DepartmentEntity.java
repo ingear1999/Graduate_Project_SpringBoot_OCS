@@ -20,7 +20,7 @@ public class DepartmentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="dept_id")
-    private Long departmentId;
+    private int departmentId;
 
 
     @Column(name="dept_name")

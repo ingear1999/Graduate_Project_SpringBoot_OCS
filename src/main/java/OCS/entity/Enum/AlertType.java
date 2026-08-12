@@ -1,6 +1,5 @@
 package OCS.entity.Enum;
 
-
 public enum AlertType {
 
     DOSAGE_OUTLIER,
@@ -8,5 +7,4 @@ public enum AlertType {
     WRONG_ROUTE,
     SPEED_ANOMALY,
     HIGH_RISK_DRUG
-
 }

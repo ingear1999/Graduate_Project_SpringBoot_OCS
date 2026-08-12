@@ -4,6 +4,7 @@ package OCS.DTO.RespondDTO;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import OCS.entity.RegistrationEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,28 +14,28 @@ import lombok.Setter;
 public class PrescriptionInfo {
 
 
-    private Integer prescriptionId;
+    private int prescriptionId;
 
 
-    private Integer registrationId;
+    private int registrationId;
 
 
-    private Integer medicineId;
+    private int medicineId;
 
 
-    private String giveOutStatus;
+    private Enum giveOutStatus;
 
 
     private String medicineRemark;
 
 
-    private Integer medicineTablet;
+    private int medicineTablet;
 
 
-    private Integer medicineDivided;
+    private int medicineDivided;
 
 
-    private Integer medicineDay;
+    private int medicineDay;
 
 
     private BigDecimal dosage;
@@ -46,7 +47,7 @@ public class PrescriptionInfo {
     private LocalDateTime orderTime;
 
 
-    private Integer sessionId;
+    private int sessionId;
 
 
     private BigDecimal fatigueScoreAtOrder;

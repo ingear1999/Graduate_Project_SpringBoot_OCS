@@ -1,6 +1,6 @@
 package OCS.entity;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,33 +16,25 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Entity
+@Table(name = "doctor")
 @Getter
 @Setter
-@Table(name = "break_log")
-public class BreakLog {
-
+public class DoctorEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int breakId;
+    @Column(name = "doctor_id")
+    private int id;
 
-    @ManyToOne 
-    @JoinColumn(name = "session_id")
-    private SessionLogEntity sessionId;
+    @ManyToOne
+    @JoinColumn(name = "dept_id")
+    private DepartmentEntity department;
 
-    @ManyToOne //Many BreakLogs → One Doctor
-    @JoinColumn(name = "doctor_id")
-    private DoctorEntity doctorId;
+    @OneToOne
+    @JoinColumn(name = "signup_id", unique = true)
+    private DoctorSignUpEntity signup;
 
-
-    private LocalDateTime breakStart;
-
-
-    private LocalDateTime breakEnd;
-
-
-    private int breakDurationMin = 0;
-
+    @OneToMany(mappedBy = "doctor")
+    private List<RegistrationEntity> registrations;
 }

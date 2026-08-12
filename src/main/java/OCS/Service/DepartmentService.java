@@ -63,7 +63,7 @@ public class DepartmentService {
   //Get the Department By Id 
     
   //-----------------------------------------------------------------------------------
-    public DepartmentInfo getDepartmentById(long id) {
+    public DepartmentInfo getDepartmentById(int id) {
     	 DepartmentEntity department = repository.findById(id)
     	            .orElseThrow(() -> new RuntimeException("Department not found"));
 
@@ -83,7 +83,7 @@ public class DepartmentService {
   //Delete Department By Id
     
   //-----------------------------------------------------------------------------------
-    public String  delDepartment(long id) {
+    public String  delDepartment(int id) {
     	DepartmentEntity department = repository.findById(id)
     			.orElseThrow(() -> new RuntimeException("Department not found"));
     	repository.deleteById(id);
@@ -96,7 +96,7 @@ public class DepartmentService {
 //Update Department by Id
    
 //--------------------------------------------------------------------------------------
-    public String updDepartment(DepartmentDTO dto,long id) {
+    public String updDepartment(DepartmentDTO dto,int id) {
     	 DepartmentEntity department = repository.findById(id)
     	            .orElseThrow(() -> new RuntimeException("Department not found"));
     	department.setDepartmentLocation(dto.getDepartmentLocation());

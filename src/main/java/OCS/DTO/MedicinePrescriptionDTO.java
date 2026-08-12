@@ -1,37 +1,118 @@
 package OCS.DTO;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class MedicinePrescriptionDTO {
 
-    private Integer registrationId;
+    private int registrationId;
 
-    private Integer medicineId;
+    private int medicineId;
 
-    private String giveOutStatus;
+    private int sessionId;
 
     private String medicineRemark;
 
-    private Integer medicineTablet;
+    private int medicineTablet;
 
-    private Integer medicineDivided;
+    private int medicineDivided;
 
-    private Integer medicineDay;
+    private int medicineDay;
 
     private BigDecimal dosage;
 
     private String route;
 
-    private LocalDateTime orderTime;
-
-    private Integer sessionId;
-
     private BigDecimal fatigueScoreAtOrder;
 
+
+    public int getRegistrationId() {
+        return registrationId;
+    }
+
+    public void setRegistrationId(int registrationId) {
+        this.registrationId = registrationId;
+    }
+
+
+    public int getMedicineId() {
+        return medicineId;
+    }
+
+    public void setMedicineId(int medicineId) {
+        this.medicineId = medicineId;
+    }
+
+
+    public int getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(int sessionId) {
+        this.sessionId = sessionId;
+    }
+
+
+    public String getMedicineRemark() {
+        return medicineRemark;
+    }
+
+    public void setMedicineRemark(String medicineRemark) {
+        this.medicineRemark = medicineRemark;
+    }
+
+
+    public int getMedicineTablet() {
+        return medicineTablet;
+    }
+
+    public void setMedicineTablet(int medicineTablet) {
+        this.medicineTablet = medicineTablet;
+    }
+
+
+    public int getMedicineDivided() {
+        return medicineDivided;
+    }
+
+    public void setMedicineDivided(int medicineDivided) {
+        this.medicineDivided = medicineDivided;
+    }
+
+
+    public int getMedicineDay() {
+        return medicineDay;
+    }
+
+    public void setMedicineDay(int medicineDay) {
+        this.medicineDay = medicineDay;
+    }
+
+
+    public BigDecimal getDosage() {
+        return dosage;
+    }
+
+    public void setDosage(BigDecimal dosage) {
+        this.dosage = dosage;
+    }
+
+
+    public String getRoute() {
+        return route;
+    }
+
+    public void setRoute(String route) {
+        this.route = route;
+    }
+
+
+    public BigDecimal getFatigueScoreAtOrder() {
+        return fatigueScoreAtOrder;
+    }
+
+    public void setFatigueScoreAtOrder(
+            BigDecimal fatigueScoreAtOrder) {
+
+        this.fatigueScoreAtOrder = fatigueScoreAtOrder;
+    }
 }

@@ -7,7 +7,7 @@ import OCS.entity.DepartmentEntity;
 
 @Repository
 public interface DepartmentRepository 
-        extends JpaRepository<DepartmentEntity, Long> {
+        extends JpaRepository<DepartmentEntity, Integer> {
 	
 //Entity = DepartmentEntity
 //Primary Key = Long (departmentId)
